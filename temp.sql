@@ -1,4 +1,4 @@
---系统
+﻿--系统
 select t.*,t.rowid from syn_sysconf t where param_key='IPUBACC_SHARE_URL';
 select t.*,t.rowid from syn_sysconf t where param_key='PUB_PUBLISHNOTIFY_URL';
 http://192.168.120.10:8080/richlifeApp/devapp/IMPServer.NotifyEventWebservice
@@ -132,4 +132,4 @@ select t.*,t.rowid from syn_mmappsrc t where appname like '%宠物天下%';
 
 select (sysdate - lastupdatetime)*24,TRUNC(sysdate)-TRUNC(lastupdatetime) from syn_mmapp where id='22086746'
 
---my test 2
+--my test 23455
