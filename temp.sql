@@ -1,4 +1,4 @@
---ÏµÍ³
+--ç³»ç»Ÿ
 select t.*,t.rowid from syn_sysconf t where param_key='IPUBACC_SHARE_URL';
 select t.*,t.rowid from syn_sysconf t where param_key='PUB_PUBLISHNOTIFY_URL';
 http://192.168.120.10:8080/richlifeApp/devapp/IMPServer.NotifyEventWebservice
@@ -10,15 +10,15 @@ select  t.*,t.rowid from syn_areacode t where t.parentid;
 
 select  t.*,t.rowid from Syn_User t
 
---Ãâ·ÑÈÎÎñ
+--å…è´¹ä»»åŠ¡
 select * from Syn_Invitecode t;
 select * from syn_mission t;
 select t.*,t.rowid from syn_usermission t where t.account ='18022473543';
 
---³É³¤ÌåÏµ
+--æˆé•¿ä½“ç³»
 select t.*,t.rowid from syn_growuptask t where  status<>2 t.extbonus is not null
 
---¹«ÖÚÕËºÅ
+--å…¬ä¼—è´¦å·
 select t.*,t.rowid from syn_pubsharetask t where t.tasktype=3 and status <>-4;
 --update syn_pubsharetask set status=-4 where createtime < to_date('2014-04-18','yyyy-mm-dd');
 select t.*,t.rowid from syn_pubaccountrcd t;
@@ -26,7 +26,7 @@ select count(1) from syn_pubaccblacklist;
 
 select t.*,t.rowid from SYN_APPLYSUBSCIBER t;
 
---²¡¶¾ÓªÏú
+--ç—…æ¯’è¥é”€
 select t.*,t.rowid  from syn_viralmarkinvite t where t.account = '13631460767';
 select t.*,t.rowid  from syn_viralmarkinvitercd t where t.account='15989119579';
 select t.*,t.rowid  from syn_viralmarkprizercd t where t.account='15989119579';
@@ -34,7 +34,7 @@ select t.*,t.rowid  from syn_viralmarkprizercd t where t.account='15989119579';
 
 
 
---Ğ¡ºÅ·ÖÏí
+--å°å·åˆ†äº«
 select t.*,t.rowid,to_char(pubsharetaskid) from syn_inviteshare t order by lastupdatetime desc;
 select t.*,t.rowid from t_mcmm_pubsharetask t where t.taskType = 3 and t.starttime < sysdate and t.auditStatus =1 and t.tryCount < 10 and (t.status = 0 or t.status = -1 );
 
@@ -43,24 +43,24 @@ select t.status,TO_CHAR(lastupdatetime,'HH24:MI:SS'),count(1) as total from syn_
 select * from syn_inviteshare where pubsharetaskid=20141024185519848 ;
 
 
---¶¨Ê±ÈÎÎñ
+--å®šæ—¶ä»»åŠ¡
 select t.*,t.rowid from syn_timetask t where id = 4;
 
 select * from t_mcmm_;
 select t.*,t.rowid from T_MCMM_GROWUPTASK t;
 select sysdate from dual;
---²Ëµ¥
+--èœå•
 select t.*,t.rowid from syn_menu t order by parentid,ordernum;
 
 
 
---¹ã¸æ
+--å¹¿å‘Š
 select t.*,t.rowid from syn_adinfo t where adposid=2601 and  id >= 54409;
 select  t.*,t.rowid from syn_adprorule t where adposid=2605;
 select  t.*,t.rowid from syn_adprorule t  where adposid=2606;
 
 108201 28
-{"boxType":0,"radioListValue":[{"isDefault":"1","value":"","key":"²»»ñÈ¡¶¯Ì¬²ÎÊı"},{"value":"{\"activeId\":\"zmsj\"}","key":"×îÃÀË²¼ä»î¶¯"}]}
+{"boxType":0,"radioListValue":[{"isDefault":"1","value":"","key":"ä¸è·å–åŠ¨æ€å‚æ•°"},{"value":"{\"activeId\":\"zmsj\"}","key":"æœ€ç¾ç¬é—´æ´»åŠ¨"}]}
 net.sf.ezmorph.bean.MorphDynaBean@19a48b2[
   {activeId=zmsj}
 ]
@@ -73,17 +73,17 @@ select * from syn_adimg;
 select * from syn_areacode
 
 
---²éÑ¯¹ã¸æID
+--æŸ¥è¯¢å¹¿å‘ŠID
 select a.id,c.value from syn_adinfo a,syn_adpropertydefine b,Syn_Adproperty c
 where a.id = c.adinfoid and c.fieldid = b.id  and b.nodename ='title' 
-and value='ÏÂ¹Ü¼ÒÍæ×ªºÍ²ÊÔÆ'
+and value='ä¸‹ç®¡å®¶ç©è½¬å’Œå½©äº‘'
 and a.id in(50015,50016,50018,50034,50075,50084,50101,50610,50677,50687,50702,50710,50722,50730)
 
---ÏûÏ¢ÍÆËÍ
+--æ¶ˆæ¯æ¨é€
 select t.*,t.rowid from syn_pushmsg t where  id in(21736692) 20116102title like '%test3%';
 select t.*,t.rowid from syn_pushmsg t where msgType=3
    
-select * from syn_pushmsg where title like '%ÇÀºì°üÒı·¢µÄÑª%';
+select * from syn_pushmsg where title like '%æŠ¢çº¢åŒ…å¼•å‘çš„è¡€%';
 select t.*,t.rowid from syn_pushtarget t where pushmsgid in (22125352) and account in ('13675835727','13631460800','13631460801','13631460802');
 select t.*,t.rowid from syn_pushtarget_his t where pushmsgid in (10605793,12424358,12416164,12429086);
 select t.*,t.rowid from syn_msgpushstatus t where pushmsgid in (22125352) and  pushtype = 0;
@@ -99,10 +99,10 @@ select account,count(1) from syn_msgpushstatus where pushmsgid in (60055349) and
 969
 1777
 
---ÏµÍ³sessionĞÅÏ¢
+--ç³»ç»Ÿsessionä¿¡æ¯
 select * from v$session where schemaname = 'MCMM'
 
---ÓªÏú»î¶¯
+--è¥é”€æ´»åŠ¨
 select t.*,t.rowid from syn_markactive t;
 select t.*,t.rowid from syn_prizepool t where activeid = 1001;
 select * from syn_prizercd;
@@ -123,11 +123,13 @@ select t.*,t.rowid from t_public_paramvalue t where marketname='caiyunmovieking'
 select  t.*,t.rowid from t_caiyunmovieking_winner t;
 
 --MM
-select t.*,t.rowid from syn_mmapp t where appid='300002828000' order by sortnum asc  where id='22102414' status=1 jsonstr like '%²¶Óã´«Ëµ%';
+select t.*,t.rowid from syn_mmapp t where appid='300002828000' order by sortnum asc  where id='22102414' status=1 jsonstr like '%æ•é±¼ä¼ è¯´%';
 
 select t.*,t.rowid from syn_mmappdowntask t;
 --update syn_mmappdowntask set status = 0 where status=-1
 select count(1) from syn_mmappdowntask where status=2
-select t.*,t.rowid from syn_mmappsrc t where appname like '%³èÎïÌìÏÂ%';
+select t.*,t.rowid from syn_mmappsrc t where appname like '%å® ç‰©å¤©ä¸‹%';
 
 select (sysdate - lastupdatetime)*24,TRUNC(sysdate)-TRUNC(lastupdatetime) from syn_mmapp where id='22086746'
+
+--my test 2
