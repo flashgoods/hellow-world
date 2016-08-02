@@ -132,4 +132,4 @@ select t.*,t.rowid from syn_mmappsrc t where appname like '%宠物天下%';
 
 select (sysdate - lastupdatetime)*24,TRUNC(sysdate)-TRUNC(lastupdatetime) from syn_mmapp where id='22086746'
 
---my test 23455
+--my test 23455666
